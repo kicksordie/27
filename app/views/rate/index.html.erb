@@ -1,0 +1,31 @@
+<h1>Rate teachers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Knowledge sharing</th>
+      <th>Passing difficulty</th>
+      <th>Justice</th>
+      <th>Jokes level</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teachers.each do |teacher| %>
+      <tr>
+        <td><%= teacher.first_name %></td>
+        <td><%= teacher.last_name %></td>
+        <td><%= teacher.knowledge_sharing %></td>
+        <td><%= teacher.passing_difficulty %></td>
+        <td><%= teacher.justice %></td>
+        <td><%= teacher.jokes_level %></td>
+        <td><%= link_to 'Vote', rate_path(teacher) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

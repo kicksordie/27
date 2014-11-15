@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Knowledge sharing:</strong>
+  <%= @vote.knowledge_sharing %>
+</p>
+
+<p>
+  <strong>Passing difficulty:</strong>
+  <%= @vote.passing_difficulty %>
+</p>
+
+<p>
+  <strong>Justice:</strong>
+  <%= @vote.justice %>
+</p>
+
+<p>
+  <strong>Jokes level:</strong>
+  <%= @vote.jokes_level %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @vote.teacher %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @vote.user %>
+</p>
+
+<%= link_to 'Edit', edit_vote_path(@vote) %> |
+<%= link_to 'Back', votes_path %>

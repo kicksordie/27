@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  knowledge_sharing: 1
+  passing_difficulty: 1
+  justice: 1
+  jokes_level: 1
+  teacher_id: 
+  user_id: 
+
+two:
+  knowledge_sharing: 1
+  passing_difficulty: 1
+  justice: 1
+  jokes_level: 1
+  teacher_id: 
+  user_id: 
