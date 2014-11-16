@@ -1,9 +1,13 @@
 class Teacher < ActiveRecord::Base
   has_many :votes
   
+  def to_s
+    first_name + " " + last_name
+  end
+  
   def knowledge_sharing
     if votes.size > 0
-      (votes.inject(0) { |sum, vote| sum + vote.knowledge_sharing }) / votes.size
+      (votes.inject(0) { |sum, vote| sum + vote.knowledge_sharing }).to_f / votes.size
     else
       0
     end
@@ -11,7 +15,7 @@ class Teacher < ActiveRecord::Base
   
   def passing_difficulty
     if votes.size > 0
-      (votes.inject(0) { |sum, vote| sum + vote.passing_difficulty }) / votes.size
+      (votes.inject(0) { |sum, vote| sum + vote.passing_difficulty }).to_f / votes.size
     else
       0
     end
@@ -19,7 +23,7 @@ class Teacher < ActiveRecord::Base
   
   def justice
     if votes.size > 0
-      (votes.inject(0) { |sum, vote| sum + vote.justice }) / votes.size
+      (votes.inject(0) { |sum, vote| sum + vote.justice }).to_f / votes.size
     else
       0
     end
@@ -27,7 +31,7 @@ class Teacher < ActiveRecord::Base
   
   def jokes_level
     if votes.size > 0
-      (votes.inject(0) { |sum, vote| sum + vote.jokes_level }) / votes.size
+      (votes.inject(0) { |sum, vote| sum + vote.jokes_level }).to_f / votes.size
     else
       0
     end

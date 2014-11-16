@@ -44,5 +44,5 @@
 
 #content { width: 900px; margin: 0 auto }
 
-th { width: 14%; overflow: visible; padding: 2px 4px; text-align: center } 
-td { width: 14%; overflow: visible; padding: 2px 4px; text-align: center }
+th { padding: 2px 8px; text-align: center } 
+td { padding: 2px 8px; text-align: center }

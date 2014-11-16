@@ -21,8 +21,6 @@ class TeachersController < ApplicationController
     @vote = @teacher.votes.find_by_user_id(current_user.id)
     if @vote.nil?
       @vote = Vote.new
-      @vote.user_id = current_user.id
-      @vote.teacher_id = @teacher.id
     end
   end
 
