@@ -1,6 +1,6 @@
 class TeachersController < ApplicationController
   before_filter :authenticate_admin!, except: [:ranking, :vote]
-  before_filter :authenticate_user!, only: [:ranking, :vote]
+  before_filter :authenticate_user!, only: [:vote]
   before_action :set_teacher, only: [:show, :edit, :vote, :update, :destroy]
 
   respond_to :html
