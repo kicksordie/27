@@ -11,6 +11,10 @@
 <div id="header">
   <span class="left">
   <%= link_to 'Rate teachers', root_url, :class => 'header-link' %>
+  <% if user_signed_in? && current_user.is_admin %>
+    <%= link_to 'Votes (admin)', votes_url, :class => 'header-link' %>
+    <%= link_to 'Teachers (admin)', teachers_url, :class => 'header-link' %>
+  <% end %>
   </span>
 
   <span class="right">
