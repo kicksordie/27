@@ -7,6 +7,11 @@ class TeachersController < ApplicationController
     @teachers = Teacher.all
     respond_with(@teachers)
   end
+  
+  def ranking
+    @teachers = Teacher.all
+    respond_with(@teachers)
+  end
 
   def show
     respond_with(@teacher)
@@ -22,6 +27,7 @@ class TeachersController < ApplicationController
     if @vote.nil?
       @vote = Vote.new
     end
+    respond_with(@vote)
   end
 
   def edit

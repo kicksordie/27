@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'rate/index'
+  get 'teachers/ranking' => 'teachers#ranking'
   get 'teachers/:id/vote' => 'teachers#vote', as: 'rate'
-  root :to => 'rate#index'
+  root :to => 'teachers#ranking'
 
   resources :votes
 

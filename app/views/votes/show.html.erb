@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+<h1>Your vote:</h1>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @vote.teacher %>
+</p>
 
 <p>
   <strong>Knowledge sharing:</strong>
@@ -18,16 +23,6 @@
 <p>
   <strong>Jokes level:</strong>
   <%= @vote.jokes_level %>
-</p>
-
-<p>
-  <strong>Teacher:</strong>
-  <%= @vote.teacher %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @vote.user %>
 </p>
 
 <%= link_to 'Edit', rate_path(@vote.teacher)%> |

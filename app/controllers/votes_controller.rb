@@ -22,6 +22,7 @@ class VotesController < ApplicationController
 
   def create
     @vote = Vote.new(vote_params)
+    @vote.user = current_user
     @vote.save
     respond_with(@vote)
   end
