@@ -22,7 +22,7 @@
         <td><%= teacher.passing_difficulty %></td>
         <td><%= teacher.justice %></td>
         <td><%= teacher.jokes_level %></td>
-        <td><%= link_to 'Rate', rate_path(teacher) %></td>
+        <td><button class="rate" id="<%=teacher.id.to_s %>">Rate</button></td>
       </tr>
     <% end %>
   </tbody>
