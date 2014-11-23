@@ -1,5 +1,6 @@
 <h1>Rate teachers</h1>
 
+<div id="ranking">
 <table>
   <thead>
     <tr>
@@ -22,10 +23,16 @@
         <td><%= teacher.passing_difficulty %></td>
         <td><%= teacher.justice %></td>
         <td><%= teacher.jokes_level %></td>
-        <td><button class="rate" id="<%=teacher.id.to_s %>">Rate</button></td>
+        <% if user_signed_in? %>
+          <td><button class="rate" id="<%=teacher.id.to_s %>">Rate</button></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
+</div>
+
+<div id="rate-frame">
+
+</div>

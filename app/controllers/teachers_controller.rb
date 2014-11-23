@@ -29,7 +29,9 @@ class TeachersController < ApplicationController
     if @vote.nil?
       @vote = Vote.new
     end
-    respond_with(@vote)
+    respond_to do |format|
+      format.html { render :layout => false }
+    end
   end
 
   def edit
