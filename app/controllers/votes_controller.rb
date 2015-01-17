@@ -22,10 +22,15 @@ class VotesController < ApplicationController
   end
 
   def create
-    @vote = Vote.new(vote_params)
-    @vote.user = current_user
-    @vote.save
-    respond_with(@vote)
+    @vote = VoteForm.new(vote_params)
+    @vote.user_id = current_user.id
+    respond_to do |format|
+      if @vote.save
+        format.html do
+          redirect_to root_url
+        end
+      end
+    end
   end
 
   def update
